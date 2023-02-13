@@ -29,6 +29,7 @@
 .exit-navbar button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .exit-navbar i {
@@ -175,7 +176,7 @@
   margin: 0.5rem;
   font-size: 1rem;
 }
-.options-tweet p {
+.fecha p {
   margin: 0.5rem;
   color: var(--color-secondary);
 }
@@ -188,7 +189,6 @@
 }
 .option i {
   font-size: 1.5rem;
-  color: gray;
   cursor: pointer;
 }
 .loginRegister {
@@ -205,9 +205,8 @@
 }
 .container-datalogin {
   background-color: var(--color-secondary);
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 1rem 1rem;
   position: relative;
-  height: 15rem;
   border-top-left-radius: 10rem;
   border-top-right-radius: 10rem;
   z-index: 1;
@@ -218,26 +217,26 @@
   color: var(--color-tertiary);
 }
 
-.form-user, .form-pass {
+.form-user, .form-pass, .form-img {
   padding: .3rem;
 }
-.form-user i, .form-pass i {
+.form-user i, .form-pass i, .form-img i {
   padding: .5rem;
   color: var(--color-primary);
 }
-.form-user input, .form-pass input {
+.form-user input, .form-pass input, .form-img input {
   border: none;
   background: none;
   border-bottom: 0.3rem double var(--color-primary);
   outline: none;
   font-size: .9rem;
-  width: 60%;
+  width: 70%;
   cursor: text;
 }
-.form-user input::placeholder, .form-pass input::placeholder {
+.form-user input::placeholder, .form-pass input::placeholder, .form-img input::placeholder {
   color: rgb(42, 41, 41);
   font-weight: 700;
-  font-size: .9rem;
+  font-size: .8rem;
 }
 .form-button {
   padding-top: 2rem;
@@ -250,4 +249,42 @@
   background: none;
   border: none;
   cursor: pointer;
+  color: var(--color-tertiary);
+}
+
+.message-alert {
+  align-items: center;
+  font-weight: 700;
+  color: #ffff;
+  border-radius: 1rem;
+  bottom: 2rem;
+  display: flex;
+  font-size: .8rem;
+  padding: .4rem 1rem;
+  position: absolute;
+  right: 2rem;
+  z-index: 100;
+}
+
+.content-mensaje {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-tertiary);
+  padding-top: 10%;
+}
+
+.color-success {
+  background-color: var(--color-success);
+}
+.color-error {
+  background-color: var(--color-danger);
+}
+i.color-success {
+  background-color: transparent;
+  color: var(--color-success);
+}
+i.color-error {
+  background-color: transparent;
+  color: var(--color-danger);
 }
