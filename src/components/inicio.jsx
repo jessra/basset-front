@@ -1,33 +1,30 @@
-import logo from '../public/logo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './assets/fontawesome';
-import { useState } from 'react';
+import logo from '../assets/Logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../assets/fontawesome';
+import { useState, useContext } from 'react';
+import { Contexto_Funciones } from '../Context/ContextoFunciones';
 
-function Inicio() {
-  const [tweet, setTweet] = useState("")
+export function Inicio() {
+  const { Saludar } = useContext(Contexto_Funciones);
+
+  const [tweet, setTweet] = useState('');
   const form = (e) => {
-    e.preventDefault()
-    console.log(tweet)
-  }
+    e.preventDefault();
+    console.log(tweet);
+  };
 
   return (
-    <div className="Inicio">
+    <div className='Inicio'>
       <div className='input-tweet'>
         <form>
           <div className='input'>
-            <i><FontAwesomeIcon icon="fa-solid fa-pencil" /></i>
-            <input 
-              type="text" 
-              placeholder='¿Qué estás pensando?' 
-              onChange={(e) => setTweet(e.target.value)}
-            />
+            <i>
+              <FontAwesomeIcon icon='fa-solid fa-pencil' />
+            </i>
+            <input type='text' placeholder='¿Qué estás pensando?' onChange={(e) => setTweet(e.target.value)} />
           </div>
           <div className='input-button'>
-            <button
-              type='button'
-              className='button-tweet'
-              onClick={form}
-            >
+            <button type='button' className='button-tweet' onClick={form}>
               Tweetear
             </button>
           </div>
@@ -36,29 +33,23 @@ function Inicio() {
       <div className='content-tweet'>
         <div className='usuario-tweet'>
           <div className='img-tweet'>
-            <img src={logo} alt="" />
+            <img src={logo} alt='' />
           </div>
           <div>
-            <h5>Kevin</h5>
+            <h5 onClick={Saludar}>Kevin</h5>
             <p>Amo linux</p>
           </div>
         </div>
         <div className='options-tweet'>
           <p>11/02/2023</p>
-          <button
-            type='button'
-            className='option'
-          >
+          <button type='button' className='option'>
             <i>
-              <FontAwesomeIcon icon="fa-solid fa-heart" />
+              <FontAwesomeIcon icon='fa-solid fa-heart' />
             </i>
           </button>
-          <button
-            type='button'
-            className='option'
-          >
+          <button type='button' className='option'>
             <i>
-              <FontAwesomeIcon icon="fa-solid fa-trash" />
+              <FontAwesomeIcon icon='fa-solid fa-trash' />
             </i>
           </button>
         </div>
@@ -66,7 +57,7 @@ function Inicio() {
       <div className='content-tweet'>
         <div className='usuario-tweet'>
           <div className='img-tweet'>
-            <img src={logo} alt="" />
+            <img src={logo} alt='' />
           </div>
           <div>
             <h5>Kevin</h5>
@@ -75,20 +66,14 @@ function Inicio() {
         </div>
         <div className='options-tweet'>
           <p>11/02/2023</p>
-          <button
-            type='button'
-            className='option'
-          >
+          <button type='button' className='option'>
             <i>
-              <FontAwesomeIcon icon="fa-solid fa-heart" />
+              <FontAwesomeIcon icon='fa-solid fa-heart' />
             </i>
           </button>
-          <button
-            type='button'
-            className='option'
-          >
+          <button type='button' className='option'>
             <i>
-              <FontAwesomeIcon icon="fa-solid fa-trash" />
+              <FontAwesomeIcon icon='fa-solid fa-trash' />
             </i>
           </button>
         </div>
@@ -96,7 +81,7 @@ function Inicio() {
       <div className='content-tweet'>
         <div className='usuario-tweet'>
           <div className='img-tweet'>
-            <img src={logo} alt="" />
+            <img src={logo} alt='' />
           </div>
           <div>
             <h5>Kevin</h5>
@@ -105,20 +90,14 @@ function Inicio() {
         </div>
         <div className='options-tweet'>
           <p>11/02/2023</p>
-          <button
-            type='button'
-            className='option'
-          >
+          <button type='button' className='option'>
             <i>
-              <FontAwesomeIcon icon="fa-solid fa-heart" />
+              <FontAwesomeIcon icon='fa-solid fa-heart' />
             </i>
           </button>
-          <button
-            type='button'
-            className='option'
-          >
+          <button type='button' className='option'>
             <i>
-              <FontAwesomeIcon icon="fa-solid fa-trash" />
+              <FontAwesomeIcon icon='fa-solid fa-trash' />
             </i>
           </button>
         </div>
@@ -126,7 +105,7 @@ function Inicio() {
       <div className='content-tweet'>
         <div className='usuario-tweet'>
           <div className='img-tweet'>
-            <img src={logo} alt="" />
+            <img src={logo} alt='' />
           </div>
           <div>
             <h5>Kevin</h5>
@@ -135,20 +114,14 @@ function Inicio() {
         </div>
         <div className='options-tweet'>
           <p>11/02/2023</p>
-          <button
-            type='button'
-            className='option'
-          >
+          <button type='button' className='option'>
             <i>
-              <FontAwesomeIcon icon="fa-solid fa-heart" />
+              <FontAwesomeIcon icon='fa-solid fa-heart' />
             </i>
           </button>
-          <button
-            type='button'
-            className='option'
-          >
+          <button type='button' className='option'>
             <i>
-              <FontAwesomeIcon icon="fa-solid fa-trash" />
+              <FontAwesomeIcon icon='fa-solid fa-trash' />
             </i>
           </button>
         </div>
@@ -156,7 +129,7 @@ function Inicio() {
       <div className='content-tweet'>
         <div className='usuario-tweet'>
           <div className='img-tweet'>
-            <img src={logo} alt="" />
+            <img src={logo} alt='' />
           </div>
           <div>
             <h5>Kevin</h5>
@@ -165,20 +138,14 @@ function Inicio() {
         </div>
         <div className='options-tweet'>
           <p>11/02/2023</p>
-          <button
-            type='button'
-            className='option'
-          >
+          <button type='button' className='option'>
             <i>
-              <FontAwesomeIcon icon="fa-solid fa-heart" />
+              <FontAwesomeIcon icon='fa-solid fa-heart' />
             </i>
           </button>
-          <button
-            type='button'
-            className='option'
-          >
+          <button type='button' className='option'>
             <i>
-              <FontAwesomeIcon icon="fa-solid fa-trash" />
+              <FontAwesomeIcon icon='fa-solid fa-trash' />
             </i>
           </button>
         </div>
@@ -186,7 +153,7 @@ function Inicio() {
       <div className='content-tweet'>
         <div className='usuario-tweet'>
           <div className='img-tweet'>
-            <img src={logo} alt="" />
+            <img src={logo} alt='' />
           </div>
           <div>
             <h5>Kevin</h5>
@@ -195,20 +162,14 @@ function Inicio() {
         </div>
         <div className='options-tweet'>
           <p>11/02/2023</p>
-          <button
-            type='button'
-            className='option'
-          >
+          <button type='button' className='option'>
             <i>
-              <FontAwesomeIcon icon="fa-solid fa-heart" />
+              <FontAwesomeIcon icon='fa-solid fa-heart' />
             </i>
           </button>
-          <button
-            type='button'
-            className='option'
-          >
+          <button type='button' className='option'>
             <i>
-              <FontAwesomeIcon icon="fa-solid fa-trash" />
+              <FontAwesomeIcon icon='fa-solid fa-trash' />
             </i>
           </button>
         </div>
@@ -225,7 +186,6 @@ function Inicio() {
         Click on the Vite and React logos to learn more
       </p> */}
     </div>
-  )
+  );
 }
 
-export default Inicio

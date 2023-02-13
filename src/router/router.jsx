@@ -1,15 +1,19 @@
-import Inicio from './inicio.jsx'
-import LoginRegister from './loginRegister.jsx'
-import { BrowserRouter, BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ListContent } from '../Views/listContent.jsx';
+import { LoginRegister } from '../Views/loginRegister.jsx';
 
-function Routes() {
+function Router() {
   return (
     <BrowserRouter>
-      <Router>
-        <Route exact path="/" component={<Inicio/>} />
-      </Router>
+      <Routes>
+        <Route exact path='/' element={<ListContent />} />
+        <Route exact path='/perfil' element={<ListContent />} />
+        <Route exact path='/favoritos' element={<ListContent />} />
+        <Route exact path='/login' element={<LoginRegister />} />
+        <Route exact path='/registro' element={<LoginRegister />} />
+      </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default Routes;
+export default Router;

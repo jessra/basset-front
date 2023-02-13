@@ -1,11 +1,9 @@
 import Navbar from './navbar';
 
-function App() {
+export function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Navbar></Navbar>!
     </div>
-  )
+  );
 }
-
-export default App
