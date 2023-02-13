@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,400&display=swap');
+
+:root {
+  --color-primary: #065471;
+  --color-secondary: #0A91AB;
+  --color-tertiary : #FFC045;
+  --color-success: #14A44D;
+  --color-danger: #DC4C64;
+  --font-primary:'Raleway', sans-serif;
+}
+
+* {
+  font-family: var(--font-primary);
+}
+
+.App {
+  background-color: #ffff;
+}
+
+.exit-navbar {
+  width: 100%;
+}
+
+.exit-navbar div {
+  display: flex;
+  justify-content: right;
+}
+
+.exit-navbar button {
+  border: none;
+  background: none;
+}
+
+.exit-navbar i {
+  font-size: 1.5rem;
+  padding: .3rem;
+}
+
+.container {
+  display: flex;
+}
+
+.navbar {
+  width: 20%;
+  justify-content: center;
+}
+
+.container-perfil {
+  justify-content: center;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.container-perfil img {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.container-perfil h5 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: .9rem;
+}
+
+.container-perfil span {
+  color: var(--color-tertiary);
+}
+
+.container-options button{
+  font-size: 1rem;
+  border: none;
+  padding: .5rem;
+  cursor: pointer;
+  background: none;
+}
+.container-options ul {
+  list-style: none;
+}
+.container-options i {
+  padding: .5rem;
+}
+
+.container-button {
+  padding: 1rem;
+  text-align: center;
+}
+
+.container-button button{
+  font-size: 1rem;
+}
+
+.button-tweet {
+  border: none;
+  background-color: var(--color-tertiary);
+  border-radius: 1rem;
+  padding: .5rem 2rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.container-logo {
+  width: 100%;
+}
+
+.container-logo img {
+  width: 7rem;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+}
+
+.content {
+  background-color: var(--color-primary);
+  height: 90vh;
+  width: 75%;
+  border-radius: 1rem;
+  overflow-y: auto;
+}
+
+.input-tweet {
+  background-color: #DFF6FF;
+  margin: 1.2rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.input {
+  padding: .4rem;
+}
+
+.input-tweet i {
+  padding: .3rem;
+  color: var(--color-secondary);
+}
+
+.input-tweet input {
+  color: var(--color-primary);
+  border: none;
+  background: none;
+  border-bottom: .2rem white solid;
+  outline: none;
+  font-size: .8rem;
+  width: 60%;
+}
+
+.input-button {
+  text-align: right;
+  padding: .4rem;
+}
+
+.content-tweet {
+  display: flex;
+  background-color: #ffff;
+  margin: 1.2rem;
+  border-radius: 1rem;
+  padding: .8rem;
+}
+.usuario-tweet {
+  display: flex;
+  width: 80%;
+}
+.img-tweet {
+  width: 7%;
+}
+.usuario-tweet img {
+  width: 100%;
+  border-radius: 50%;
+}
+.usuario-tweet h5 {
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+.options-tweet p {
+  margin: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.option {
+  padding-top: 1.5rem;
+  text-align: center;
+  background: none;
+  border: none;
+}
+.option i {
+  font-size: 1.5rem;
+  color: gray;
+  cursor: pointer;
+}
+.loginRegister {
+  display: flex;
+  justify-content: center;
+  height: 97vh;
+  align-items: flex-end;
+}
+.container-login {
+  text-align: center;
+}
+.container-logoform {
+  margin: -1rem;
+}
+.container-datalogin {
+  background-color: var(--color-secondary);
+  padding: 3rem 1rem;
+  position: relative;
+  height: 15rem;
+  border-top-left-radius: 10rem;
+  border-top-right-radius: 10rem;
+  z-index: 1;
+}
+
+.container-datalogin h5 {
+  font-size: 1.2rem;
+  color: var(--color-tertiary);
+}
+
+.form-user, .form-pass {
+  padding: .3rem;
+}
+.form-user i, .form-pass i {
+  padding: .5rem;
+  color: var(--color-primary);
+}
+.form-user input, .form-pass input {
+  border: none;
+  background: none;
+  border-bottom: 0.3rem double var(--color-primary);
+  outline: none;
+  font-size: .9rem;
+  width: 60%;
+  cursor: text;
+}
+.form-user input::placeholder, .form-pass input::placeholder {
+  color: rgb(42, 41, 41);
+  font-weight: 700;
+  font-size: .9rem;
+}
+.form-button {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.button-loginregister {
+  font-weight: 400;
+  font-style: italic;
+  font-size: .9rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
