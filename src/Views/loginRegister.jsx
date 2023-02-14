@@ -1,6 +1,4 @@
 import logo from '../assets/Logo.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../assets/fontawesome';
 import { Registro } from "../components/Registro.jsx";
 import { Login } from "../components/Login.jsx";
 import { Alerts } from "../components/Alerts.jsx";

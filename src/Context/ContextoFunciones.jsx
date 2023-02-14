@@ -8,14 +8,12 @@ export function Contexto_DataProvider(props) {
   const [modal, setModal] = useState(false);
 
   useEffect(() => {
-    // localStorage.removeItem('bassetUsers')
     setBasU(VerificarEDatosUser)
     setBasT(VerificarEDatosTweets)
     if (localStorage.getItem('basset') == null){
       localStorage.setItem('basset', JSON.stringify(''));
     } 
   }, []);
-  console.log(bassetTweets)
 
   function Alert(men, tipo) {
     if (tipo) {

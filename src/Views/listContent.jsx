@@ -5,6 +5,7 @@ import { Contexto_Funciones } from '../Context/ContextoFunciones';
 import { useContext } from 'react';
 import { Alerts } from "../components/Alerts.jsx";
 import { ModalInput } from '../components/ModalInput';
+import logo from '../assets/Logo.png';
 
 export function ListContent() {
   const { cerrarSesion, modal, setModal } = useContext(Contexto_Funciones);
