@@ -5,6 +5,7 @@ export const Contexto_Funciones = createContext();
 export function Contexto_DataProvider(props) {
   const [bassetUsers, setBasU] = useState([]);
   const [bassetTweets, setBasT] = useState([]);
+  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     // localStorage.removeItem('bassetUsers')
@@ -14,6 +15,7 @@ export function Contexto_DataProvider(props) {
       localStorage.setItem('basset', JSON.stringify(''));
     } 
   }, []);
+  console.log(bassetTweets)
 
   function Alert(men, tipo) {
     if (tipo) {
@@ -144,7 +146,7 @@ export function Contexto_DataProvider(props) {
         content,
         date: obetenerFecha(),
         fav: [],
-        id: Object.keys(bassetTweets).length
+        id: prop + Object.keys(bassetTweets).length
       }
       
       let data = JSON.parse(localStorage.getItem('bassetTweets'));
@@ -162,8 +164,10 @@ export function Contexto_DataProvider(props) {
         if (t.fav.includes(user)) {
           const indice = t.fav.indexOf(user)
           t.fav.splice(indice, 1)
+          Alert('Eliminado de favoritos', true)
         } else {
           tweets[i].fav.push(user)
+          Alert('Marcado como favorito', true)
         }
       }
     })
@@ -202,7 +206,7 @@ export function Contexto_DataProvider(props) {
     return tweets
   }
 
-  return <Contexto_Funciones.Provider value={{DupUser, registro, login, Alert, cerrarSesion, crearTweets, marcarFav, eliminarTweet, listarFavs, listarmisTweets}}>
+  return <Contexto_Funciones.Provider value={{DupUser, registro, login, Alert, cerrarSesion, crearTweets, marcarFav, eliminarTweet, listarFavs, listarmisTweets, modal, setModal}}>
     {props.children}
   </Contexto_Funciones.Provider>;
 }

@@ -22,17 +22,17 @@ export function Tweets({data}) {
     <div>
       {data.map((i) => (
         <div key={i.id} data-key={i.id} className='content-tweet'>
-          <div className='usuario-tweet'>
             <div className='img-tweet'>
-              <img src={i.icon} alt='' />
+              <img src={logo} alt='' />
             </div>
+          <div className='usuario-tweet'>
             <div>
               <h5>{i.prop}</h5>
               <p>{i.content}</p>
             </div>
           </div>
           <div className='options-tweet'>
-            <p className='fecha'>{i.date}</p>
+            <p className='options-fecha'>{i.date}</p>
             <button type='button' className='option' onClick={(e) => {marcarFav(i.id, basset.user)}}>
               <i style={i.fav.includes(basset.user) ? {color: '#DC4C64'} : {color: 'grey'}}>
                 <FontAwesomeIcon icon='fa-solid fa-heart' />

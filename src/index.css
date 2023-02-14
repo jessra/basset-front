@@ -44,6 +44,7 @@
 .navbar {
   width: 20%;
   justify-content: center;
+  height: -webkit-fill-available
 }
 
 .container-perfil {
@@ -73,21 +74,22 @@
   border-radius: 10rem;
 }
 .container-options button{
-  font-size: 1rem;
+  font-size: .9rem;
   border: none;
-  padding: .5rem;
+  padding: .4rem;
   cursor: pointer;
   background: none;
 }
 .container-options ul {
   list-style: none;
+  margin-left: -.6rem;
 }
 .container-options i {
-  padding: .5rem;
+  padding-right: .5rem;
 }
 
 .container-button {
-  padding: 1rem;
+  padding: 1rem 0rem;
   text-align: center;
 }
 
@@ -105,11 +107,6 @@
 }
 
 .container-logo {
-  width: 100%;
-}
-
-.container-logo img {
-  width: 7rem;
   position: fixed;
   z-index: 1;
   bottom: 0;
@@ -128,18 +125,26 @@
   margin: 1.2rem;
   border-radius: 1rem;
   padding: 1rem;
+  display: block;
+}
+.navbar-toggler {
+  display: none;
+}
+label {
+  top: .5rem;
+  position: absolute;
 }
 
 .input {
   padding: .4rem;
 }
 
-.input-tweet i {
+.input-tweet i, .modal-input-tweet i {
   padding: .3rem;
   color: var(--color-secondary);
 }
 
-.input-tweet input {
+.input-tweet input, .modal-input-tweet input {
   color: var(--color-primary);
   border: none;
   background: none;
@@ -160,15 +165,19 @@
   margin: 1.2rem;
   border-radius: 1rem;
   padding: .8rem;
+  line-break: anywhere;
 }
 .usuario-tweet {
   display: flex;
   width: 80%;
 }
-.img-tweet {
-  width: 7%;
+.usuario-tweet p {
+  margin-left: -1.5rem;
 }
-.usuario-tweet img {
+.img-tweet {
+  width: 6%;
+}
+.img-tweet img {
   width: 100%;
   border-radius: 50%;
 }
@@ -176,7 +185,7 @@
   margin: 0.5rem;
   font-size: 1rem;
 }
-.fecha p {
+.options-fecha {
   margin: 0.5rem;
   color: var(--color-secondary);
 }
@@ -287,4 +296,99 @@ i.color-success {
 i.color-error {
   background-color: transparent;
   color: var(--color-danger);
+}
+
+.oscuro {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.303);
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 100;
+}
+
+.modal-input-tweet {
+  height: 15vh;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #DFF6FF;
+  width: 40%;
+  margin: auto;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+}
+.button-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  float: right;
+  margin-top: -2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 90%;
+    margin-left: 1rem;
+  }
+  .content-tweet {
+    margin: .6rem;
+    padding: .5rem;
+  }
+  .option {
+    padding-top: 0rem;
+  }
+  .options-fecha {
+    font-size: .6rem;
+  }
+  .input-tweet {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+  input.navbar-toggler:checked~.navbar {
+    position: absolute;
+    display: block;
+    background-color: #ffff;
+  }
+  label i::before {
+    font-size: 2.5rem;
+  }
+  .container {
+    display: block;
+  }
+  .exit-navbar i {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .img-tweet {
+    width: 11%;
+  }
+  .navbar {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 370px) {
+  .img-tweet {
+    width: 15%;
+  }
+  .navbar {
+    width: 50%;
+  }
 }

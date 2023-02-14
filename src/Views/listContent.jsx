@@ -3,14 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../assets/fontawesome';
 import { Content } from '../components/Content';
 import { Contexto_Funciones } from '../Context/ContextoFunciones';
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { Alerts } from "../components/Alerts.jsx";
+import { ModalInput } from '../components/ModalInput';
 
 export function ListContent() {
-  const { cerrarSesion } = useContext(Contexto_Funciones);
-  var classInicio = ''
-  var classPerfil = ''
-  var classFav = ''
+  const { cerrarSesion, modal, setModal } = useContext(Contexto_Funciones);
+  let classInicio = ''
+  let classPerfil = ''
+  let classFav = ''
   const vistaActual = window.location.href
   const route = vistaActual.split('/')[3]
   if (route == 'perfil') {
@@ -38,6 +39,8 @@ export function ListContent() {
           </div>
         </div>
         <div className='container'>
+          <input className="navbar-toggler" type='checkbox' id='navbar'/>
+          <label htmlFor="navbar"><FontAwesomeIcon icon="fa-solid fa-bars" /></label>
           <div className='navbar'>
             <div className='container-perfil'>
               <a>
@@ -80,7 +83,7 @@ export function ListContent() {
               </ul>
             </div>
             <div className='container-button'>
-              <button type='button' className='button-tweet'>
+              <button type='button' className='button-tweet' onClick={() => {setModal(!modal)}}>
                 Tweetear
               </button>
             </div>
@@ -92,6 +95,7 @@ export function ListContent() {
             <Content></Content>
           </div>
         </div>
+        <ModalInput user={basset.user} icon={basset.icon}></ModalInput>
         <Alerts></Alerts>
       </div>
     );
