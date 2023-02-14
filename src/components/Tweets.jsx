@@ -1,4 +1,3 @@
-import logo from '../assets/Logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../assets/fontawesome';
 import { Contexto_Funciones } from '../Context/ContextoFunciones';
@@ -23,7 +22,7 @@ export function Tweets({data}) {
       {data.map((i) => (
         <div key={i.id} data-key={i.id} className='content-tweet'>
             <div className='img-tweet'>
-              <img src={logo} alt='' />
+              <img src={i.icon} alt='' />
             </div>
           <div className='usuario-tweet'>
             <div>

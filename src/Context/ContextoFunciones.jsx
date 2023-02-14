@@ -206,7 +206,19 @@ export function Contexto_DataProvider(props) {
     return tweets
   }
 
-  return <Contexto_Funciones.Provider value={{DupUser, registro, login, Alert, cerrarSesion, crearTweets, marcarFav, eliminarTweet, listarFavs, listarmisTweets, modal, setModal}}>
+  return <Contexto_Funciones.Provider value={{
+    DupUser, 
+    registro, 
+    login,
+    Alert, 
+    cerrarSesion, 
+    crearTweets, 
+    marcarFav, 
+    eliminarTweet, 
+    listarFavs, 
+    listarmisTweets, 
+    modal, setModal
+    }}>
     {props.children}
   </Contexto_Funciones.Provider>;
 }

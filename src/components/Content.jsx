@@ -1,4 +1,3 @@
-import logo from '../assets/Logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../assets/fontawesome';
 import { useState, useContext } from 'react';

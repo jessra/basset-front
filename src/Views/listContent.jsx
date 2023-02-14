@@ -1,9 +1,8 @@
-import logo from '../assets/Logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../assets/fontawesome';
 import { Content } from '../components/Content';
 import { Contexto_Funciones } from '../Context/ContextoFunciones';
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { Alerts } from "../components/Alerts.jsx";
 import { ModalInput } from '../components/ModalInput';
 
